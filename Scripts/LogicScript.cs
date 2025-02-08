@@ -24,7 +24,7 @@ public class LogicScript : MonoBehaviour
     {
         //PlayerPrefs.DeleteKey("HighScore");
         highScore = PlayerPrefs.GetInt("HighScore", 0);
-        HighScoreText.color = new Color(0, 1, 92f / 255f, 1);
+        HighScoreText.color = new Color(122f / 255f, 12f / 255f, 247f / 255f, 1);
         HighScoreText.text = "High Score: " + highScore;
     }
     private void Update()
@@ -44,13 +44,13 @@ public class LogicScript : MonoBehaviour
         if (Input.anyKeyDown && onlyOneTime )
         {
             //Adjusting HighScoreText
-            HighScoreText.color = new Color(17f / 255f, 17f / 255f, 17f / 255f, 1);
+            HighScoreText.color = new Color(0, 0, 0, 1);
             HighScoreText.rectTransform.localPosition = new Vector3(-573, -19.8f, 0);
             HighScoreText.fontSize = 53;
 
             //
 
-            JustScore.color = new Color(43f / 255f, 43f / 255f, 43f / 255f, 1);
+            JustScore.color = new Color(0, 0, 0, 1);
             Scoretext.color = new Color(0, 0, 0, 1);
             
             birdScene.SetActive(true);
@@ -63,6 +63,7 @@ public class LogicScript : MonoBehaviour
         {
             IndividualPipe.globalSpeed += 2;
             CollectedPipe.currentSpawnRate -= 0.5f;
+            BirdS.speed += 0.5f;
             levelup = false;
         }
     }
