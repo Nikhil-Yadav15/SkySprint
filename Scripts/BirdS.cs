@@ -41,6 +41,5 @@ public class BirdS : MonoBehaviour
         audioSource.PlayOneShot(soundEffect);
         logic.gameOver();
         alive = false;
-
     }
 }
