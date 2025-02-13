@@ -20,7 +20,5 @@ public class BGScrpit : MonoBehaviour
         {
             Instantiate(bg, new Vector3(transform.position.x, 0, 5), transform.rotation);
             timer = 0;
-        }
-
-    }
+        }  }
 }
